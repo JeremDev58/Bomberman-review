@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" lang="fr" content="Sam Caubrière">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomberman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <style></style>
+
+  <div id="map"></div>
+
+  <!-- The Modal -->
+  <div id="menu" class="modal">
+      <div id="content-menu">
+        <div class="form">
+          <label class="text" for="label-monsters">Nombre de monstres:</label>
+          <select class="text" role="listbox" tabindex="0" id="listbox-monsters" onclick="return listItemClick(event);" aria-activedescendant="listbox1-1">
+            <option role="option" id="listbox-monsters-1" class="selected">3</option>
+            <option role="option" id="listbox-monsters-2">2</option>
+            <option role="option" id="listbox-monsters-3">1</option>
+          </select>
+        </div>
+        <div class="form">
+          <label class="text" for="label-map">Taille de la carte:</label>
+          <select class="text" role="listbox" tabindex="0" id="listbox-map" onclick="return listItemClick(event);" aria-activedescendant="listbox1-1">
+            <option role="option" id="listbox-map-1" class="selected">9 lignes</option>
+            <option role="option" id="listbox-map-2">12 lignes</option>
+            <option role="option" id="listbox-map-3">15 lignes</option>
+            <option role="option" id="listbox-map-4">18 lignes</option>
+            <option role="option" id="listbox-map-5">21 lignes</option>
+            <option role="option" id="listbox-map-6">24 lignes</option>
+          </select>
+        </div>
+        <div onClick="start()" id="btn-play" class="btn close">Jouer</div>
+      </div>
+        
+  </div>
+
+  <div id="finish" class="modal">
+    <div id="content-finish">
+        <div onClick="again()" id="btn-again" class="btn close">Rejouer</div>
+        <div onClick="menu()" id="btn-menu" class="btn close">Menu</div>
+    </div>
+  </div>
+
+  <script src="init.js"></script>
+  <script src="map.js"></script>
+  <script src="block.js"></script>
+  <script src="object.js"></script>
+  <script src="character.js"></script>
+  <script src="controller.js"></script>
+  <script src="start.js"></script>
+</body>
+</html>
